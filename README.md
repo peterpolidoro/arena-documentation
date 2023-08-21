@@ -1,15 +1,15 @@
-- [About](#org186fb7a)
-- [Images](#orge4deb4d)
-- [Schematic](#org0154050)
-- [PCB](#org6e9285b)
-- [Bill of Materials](#org6fc81f7)
-- [Development](#orgd53c327)
+- [About](#org3daa40a)
+- [Images](#org430ea78)
+- [Schematic](#org1256d36)
+- [PCB](#orgb697424)
+- [Bill of Materials](#orge0eae26)
+- [Development](#orgf494e78)
 
     <!-- This file is generated automatically from metadata -->
     <!-- File edits may be overwritten! -->
 
 
-<a id="org186fb7a"></a>
+<a id="org3daa40a"></a>
 
 # About
 
@@ -30,22 +30,22 @@
 ```
 
 
-<a id="orge4deb4d"></a>
+<a id="org430ea78"></a>
 
 # Images
 
 
-<a id="org0154050"></a>
+<a id="org1256d36"></a>
 
 # Schematic
 
 
-<a id="org6e9285b"></a>
+<a id="orgb697424"></a>
 
 # PCB
 
 
-<a id="org6fc81f7"></a>
+<a id="orge0eae26"></a>
 
 # Bill of Materials
 
@@ -63,7 +63,7 @@
 |---- |----------- |------------------------ |------------ |-------- |
 
 
-<a id="orgd53c327"></a>
+<a id="orgf494e78"></a>
 
 # Development
 
@@ -85,5 +85,8 @@
 
 ## Edit project
 
-    make -f .metadata/Makefile project-edits
+    make -f .metadata/Makefile kicad-edits
+    exit
+
+    make -f .metadata/Makefile freecad-edits
     exit

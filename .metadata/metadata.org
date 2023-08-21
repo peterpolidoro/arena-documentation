@@ -291,7 +291,12 @@ make -f .metadata/Makefile metadata
 ** Edit project
 
 #+BEGIN_EXAMPLE
-make -f .metadata/Makefile project-edits
+make -f .metadata/Makefile kicad-edits
+exit
+#+END_EXAMPLE
+
+#+BEGIN_EXAMPLE
+make -f .metadata/Makefile freecad-edits
 exit
 #+END_EXAMPLE
 
@@ -339,7 +344,8 @@ exit
    "inkscape"
    "python"
    "python-ipython"
-   "python-kicad-bom"))
+   "python-kicad-bom"
+   "freecad"))
 #+END_SRC
 
 #+BEGIN_SRC text :tangle Makefile :exports none :noweb yes
@@ -371,11 +377,15 @@ guix-container:
 ipython-shell:
 	$(GUIX-CONTAINER) -- ipython
 
-.PHONY: project-edits
-project-edits:
+.PHONY: kicad-edits
+kicad-edits:
 	# $(GUIX-CONTAINER) -- kicad
 	# $(GUIX-SHELL) -- kicad
 	KICAD_CONFIG_HOME=$(KICAD_CONFIG_HOME) $(GUIX-SHELL) -E "^KICAD_CONFIG_HOME" -- kicad
+
+.PHONY: freecad-edits
+freecad-edits:
+	$(GUIX-SHELL) -- FreeCAD
 
 .PHONY: skip-worktree-config
 skip-worktree-config:

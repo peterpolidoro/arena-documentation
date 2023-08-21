@@ -17,4 +17,5 @@
    "inkscape"
    "python"
    "python-ipython"
-   "python-kicad-bom"))
+   "python-kicad-bom"
+   "freecad"))

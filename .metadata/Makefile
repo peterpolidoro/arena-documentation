@@ -26,11 +26,15 @@ guix-container:
 ipython-shell:
 	$(GUIX-CONTAINER) -- ipython
 
-.PHONY: project-edits
-project-edits:
+.PHONY: kicad-edits
+kicad-edits:
 	# $(GUIX-CONTAINER) -- kicad
 	# $(GUIX-SHELL) -- kicad
 	KICAD_CONFIG_HOME=$(KICAD_CONFIG_HOME) $(GUIX-SHELL) -E "^KICAD_CONFIG_HOME" -- kicad
+
+.PHONY: freecad-edits
+freecad-edits:
+	$(GUIX-SHELL) -- FreeCAD
 
 .PHONY: skip-worktree-config
 skip-worktree-config:
