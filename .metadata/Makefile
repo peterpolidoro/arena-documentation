@@ -47,3 +47,7 @@ no-skip-worktree-config:
 .PHONY: ls-files-config
 ls-files-config:
 	git ls-files .metadata/.config/ -v
+
+.PHONY: trimmed-images
+trimmed-images:
+	mogrify -trim images/*.png
