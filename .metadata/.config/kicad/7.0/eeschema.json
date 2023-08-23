@@ -242,7 +242,7 @@
       "always_show_cursor": true,
       "fullscreen_cursor": true
     },
-    "display": 1,
+    "display": 0,
     "grid": {
       "axes_enabled": false,
       "fast_grid_1": 1,
