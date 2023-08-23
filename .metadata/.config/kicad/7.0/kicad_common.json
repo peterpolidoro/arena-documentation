@@ -9,7 +9,7 @@
   },
   "auto_backup": {
     "backup_on_autosave": false,
-    "enabled": true,
+    "enabled": false,
     "limit_daily_files": 5,
     "limit_total_files": 25,
     "limit_total_size": 104857600,

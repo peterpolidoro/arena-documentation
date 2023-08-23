@@ -36,8 +36,8 @@
   "pcm": {
     "check_for_updates": false,
     "last_download_dir": "",
-    "lib_auto_add": true,
-    "lib_auto_remove": true,
+    "lib_auto_add": false,
+    "lib_auto_remove": false,
     "lib_prefix": "PCM_",
     "repositories": [
       {
@@ -57,8 +57,7 @@
   },
   "system": {
     "check_for_updates": 1,
-    "file_history": [
-    ],
+    "file_history": [],
     "first_run_shown": false,
     "last_imperial_units": 0,
     "last_metric_units": 1,
