@@ -4,10 +4,10 @@
     "background_top": "rgb(255, 255, 255)",
     "board": "rgba(51, 43, 23, 0.902)",
     "copper": "rgb(179, 156, 0)",
-    "silkscreen_bottom": "rgb(0, 0, 0)",
+    "silkscreen_bottom": "rgb(230, 230, 230)",
     "silkscreen_top": "rgb(255, 255, 0)",
-    "soldermask_bottom": "rgba(0, 0, 0, 0.831)",
-    "soldermask_top": "rgba(0, 0, 0, 0.831)",
+    "soldermask_bottom": "rgba(20, 51, 36, 0.831)",
+    "soldermask_top": "rgba(20, 51, 36, 0.831)",
     "solderpaste": "rgb(128, 128, 128)",
     "use_board_stackup_colors": false
   },

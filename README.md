@@ -1,15 +1,15 @@
-- [About](#org3daa40a)
-- [Images](#org430ea78)
-- [Schematic](#org1256d36)
-- [PCB](#orgb697424)
-- [Bill of Materials](#orge0eae26)
-- [Development](#orgf494e78)
+- [About](#org1cec653)
+- [Images](#org0fdcfe3)
+- [Schematic](#org49ec279)
+- [PCB](#org3485fe9)
+- [Bill of Materials](#orgf452027)
+- [Development](#org853af77)
 
     <!-- This file is generated automatically from metadata -->
     <!-- File edits may be overwritten! -->
 
 
-<a id="org3daa40a"></a>
+<a id="org1cec653"></a>
 
 # About
 
@@ -18,7 +18,7 @@
 - Description: Tools and files to help document the Reiser lab Modular LED Display panels.
 - Version: 1.0
 - Kicad Version: 7.0.7
-- Release Date: 2023-08-21
+- Release Date: 2023-08-25
 - Creation Date: 2023-10-21
 - License: BSD-3-Clause
 - URL: https://github.com/janelia-kicad/panels-documentation
@@ -30,22 +30,22 @@
 ```
 
 
-<a id="org430ea78"></a>
+<a id="org0fdcfe3"></a>
 
 # Images
 
 
-<a id="org1256d36"></a>
+<a id="org49ec279"></a>
 
 # Schematic
 
 
-<a id="orgb697424"></a>
+<a id="org3485fe9"></a>
 
 # PCB
 
 
-<a id="orge0eae26"></a>
+<a id="orgf452027"></a>
 
 # Bill of Materials
 
@@ -63,7 +63,7 @@
 |---- |----------- |------------------------ |------------ |-------- |
 
 
-<a id="orgf494e78"></a>
+<a id="org853af77"></a>
 
 # Development
 
