@@ -345,7 +345,8 @@ exit
    "python"
    "python-ipython"
    "python-kicad-bom"
-   "freecad"))
+   "freecad"
+   "gimp"))
 #+END_SRC
 
 #+BEGIN_SRC text :tangle Makefile :exports none :noweb yes
@@ -386,6 +387,10 @@ kicad-edits:
 .PHONY: freecad-edits
 freecad-edits:
 	$(GUIX-SHELL) -- FreeCAD
+
+.PHONY: gimp-edits
+gimp-edits:
+	$(GUIX-SHELL) -- gimp
 
 .PHONY: skip-worktree-config
 skip-worktree-config:

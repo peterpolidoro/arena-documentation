@@ -18,4 +18,5 @@
    "python"
    "python-ipython"
    "python-kicad-bom"
-   "freecad"))
+   "freecad"
+   "gimp"))

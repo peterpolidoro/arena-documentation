@@ -36,6 +36,10 @@ kicad-edits:
 freecad-edits:
 	$(GUIX-SHELL) -- FreeCAD
 
+.PHONY: gimp-edits
+gimp-edits:
+	$(GUIX-SHELL) -- gimp
+
 .PHONY: skip-worktree-config
 skip-worktree-config:
 	git ls-files -z .metadata/.config/ | xargs -0 git update-index --skip-worktree
