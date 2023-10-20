@@ -1,0 +1,92 @@
+
+* Figure 2.2
+
+#+BEGIN_SRC plantuml
+@startuml
+[*] -> default
+default -down-> caps_locked : CAPS_LOCK
+caps_locked -> default : CAPS_LOCK
+default -> default : ANY_KEY / send_lower_case_scan_code();
+caps_locked -> caps_locked : ANY_KEY / send_upper_case_scan_code();
+@enduml
+#+END_SRC
+
+* Figure 2.3
+
+#+BEGIN_SRC plantuml
+@startuml
+[*] -> s1
+s1 -> s2 : E1 / action1();
+s2 -> s3 : E2 / action2();
+s3 -> [*] : E3 / action3();
+@enduml
+#+END_SRC
+
+* Figure 2.7
+
+#+BEGIN_SRC plantuml
+@startuml
+[*] -> heating
+state heating {
+  heating : entry / heater_on();
+  heating : exit / heater_off();
+  [*] --> toasting
+  toasting : entry / arm_time_event(toast_color);
+  toasting : exit / disarm_time_event();
+  heating --> toasting : DO_TOASTING
+  heating -> baking : DO_BAKING
+  baking : entry / set_tempertature(tempurature);
+  baking : exit / set_tempertature(0);
+}
+heating --> door_open : DOOR_OPEN
+door_open -> heating : DOOR_CLOSE
+door_open : entry / internal_lamp_on();
+door_open : exit / internal_lamp_off();
+@enduml
+#+END_SRC
+
+* Figure 2.18
+
+#+BEGIN_SRC plantuml
+@startuml
+[*] -> on
+state on {
+  on : entry /
+  on : exit /
+  [*] -> ready
+  state ready {
+    [*] -> begin
+    state result {
+    }
+  }
+  state operand1 {
+    state zero1 {
+    }
+    state int1 {
+    }
+    state frac1 {
+    }
+  }
+  state negated1 {
+  }
+  state opEntered {
+  }
+  state negated2 {
+  }
+  state operand2 {
+    state zero2 {
+    }
+    state int2 {
+    }
+    state frac2 {
+    }
+  }
+  state error {
+  }
+  begin -> negated1 : OPER[keyid == "-"]
+  negated1 -> begin : CE
+}
+on -> on : C
+on --> [*] : OFF
+@enduml
+#+END_SRC
