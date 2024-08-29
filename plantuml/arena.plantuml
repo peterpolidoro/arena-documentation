@@ -1,0 +1,44 @@
+@startuml
+
+state PollingForCommands {
+  PollingForCommands : entry / enableCommandPollingTimer()
+  state WaitingForCommand {
+  }
+  state ReadingCommand {
+    ReadingCommand : entry / readCommand()
+    ReadingCommand : ALL_ON / display.dispatch(e)
+    ReadingCommand : STOP_DISPLAY / display.dispatch(e)
+    ReadingCommand : STREAM_FRAME / display.dispatch(e)
+    ReadingCommand : START_TRIAL / display.dispatch(e)
+  }
+  [*] --> WaitingForCommand
+  WaitingForCommand --> ReadingCommand : COMMAND_POLLING_TIMER_EXPIRE
+  ReadingCommand --> WaitingForCommand : NO_COMMAND
+}
+state Displaying {
+  Displaying : entry / enableFrameRateTimer()
+  Displaying : exit / disableFrameRateTimer()
+  state AllOff {
+    AllOff : FRAME_RATE_TIMER_EXPIRE /
+  }
+  state WaitingToShowFrame {
+  }
+  state ShowingFrame {
+    ShowingFrame : BEGIN_TRANSFER_FRAME /
+    ShowingFrame : END_TRANSFER_FRAME /
+    state AllOn {
+    }
+    state StreamingFrame {
+    }
+    state RunningTrial {
+    }
+  }
+  [*] --> AllOff
+  Displaying --> AllOff : STOP_DISPLAY
+  Displaying --> AllOn : ALL_ON
+  Displaying --> StreamingFrame : STREAM_FRAME
+  Displaying --> RunningTrial : START_TRIAL
+  WaitingToShowFrame --> ShowingFrame : FRAME_RATE_TIMER_EXPIRE
+}
+
+@enduml
